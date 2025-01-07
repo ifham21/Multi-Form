@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.expertise-container {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #d1d1d1;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.expertise-item {
+  padding: 15px 0;
+}
+
+.expertise-header {
+  display: flex;
+  align-items: center;
+}
+
+.expertise-header input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.expertise-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #005d4b;
+  cursor: pointer;
+}
+
+.expertise-details {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.expertise-details ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+  color: #555;
+}
+
+.expertise-details ul li {
+  margin-bottom: 8px;
+}
+
+.role-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.expertise-header:hover .expertise-title {
+  text-decoration: underline;
+}
+
+.registration-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #f9fafb;
+  border-radius: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.headerContent {
+  text-align: center;
+  border: 1px solid #007b7f;
+  color: #307977;
+  border-radius: 100px;
+  background-color: #3079771f;
+}
+
+.headerContent p {
+  font-size: 14px;
+  color: #307977;
+  font-weight: 500;
+  padding: 0;
+  margin: 8px;
+}
+
+.contents {
+  color: #6e7071;
+  font-size: 14px;
+}

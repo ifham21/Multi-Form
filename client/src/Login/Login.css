@@ -1,0 +1,75 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .login-form {
+    flex: 1;
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+  }
+  
+
+  .text{
+    font-weight: 500;
+    color: #828080;
+  }
+
+  h1{
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .welcome{
+    color: #B0B0B0;
+    font-size: large;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.8rem;
+    font-size: 1rem;
+    background-color: #035C59;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+  }
+  
+  .register-link {
+    color: #005f40;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .image-section {
+    flex: 2;
+    background: url('../../bg-img.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .lastLine{
+    align-self: center;
+  }

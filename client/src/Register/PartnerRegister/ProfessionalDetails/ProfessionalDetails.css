@@ -1,0 +1,55 @@
+.form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+}
+
+.thisLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #797979;
+}
+
+.thisUpload-box {
+    border: 2px dashed #035C59;
+    background-color: #DAECEC;
+    margin-bottom: 40px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    color: #004d40;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+.thisUpload-box:hover {
+    background-color: #e0f2f1;
+    color: #00332a;
+}
+
+.thisUpload-box input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.thisUpload-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.thisCheckbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: self-start;
+    margin-top: 15px;
+}
+
