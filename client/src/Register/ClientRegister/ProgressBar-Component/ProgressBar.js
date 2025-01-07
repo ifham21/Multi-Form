@@ -4,8 +4,8 @@ import "./ProgressBar.css";
 const steps = [
   "Select your expertise",
   "Client Details",
-  "Company address",
-  "Fit to work",
+  // "Company address",
+  // "Fit to work",
   "Onboarding Form Complete",
 ];
 

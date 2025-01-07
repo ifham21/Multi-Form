@@ -1,4 +1,5 @@
 import React from "react";
+import "./OrganisationDetails.css"
 
 const OrganisationDetails = () => {
   return (
