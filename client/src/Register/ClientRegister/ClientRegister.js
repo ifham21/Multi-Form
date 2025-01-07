@@ -16,21 +16,21 @@ const ClientRegister = () => {
   // const [repeatPassword, setRepeatPassword] = useState("")
 
   const handleSignup = (e) => {
-    e.preventDefault();
-    axios.post("http://localhost:3001/signup", {name, email, password})
-    .then(result => {
-      if(result.status == 201){
-        console.log("User Created Successfully");
+    // e.preventDefault();
+    // axios.post("http://localhost:3001/signup", {name, email, password})
+    // .then(result => {
+    //   if(result.status == 201){
+    //     console.log("User Created Successfully");
         navigate("/client-multi");
-      }
-    })
-    .catch(err => {
-      if (err.response && err.response.status===400) {
-        window.alert("Email already exists. Please use a different email")
-      } else{
-        console.log(err)
-      }
-    })
+    //   }
+    // })
+    // .catch(err => {
+    //   if (err.response && err.response.status===400) {
+    //     window.alert("Email already exists. Please use a different email")
+    //   } else{
+    //     console.log(err)
+    //   }
+    // })
   }
 
   return (

@@ -66,7 +66,7 @@
   
   .image-section {
     flex: 2;
-    background: url('../../bg-img.jpg') no-repeat center center;
+    background: url('../bg-img.jpg') no-repeat center center;
     background-size: cover;
   }
   
