@@ -1,12 +1,14 @@
-package com.user.userservice;
+package com.user.userservice.controller;
 
-import com.user.userservice.User;
-import com.user.userservice.UserService;
+import com.user.userservice.model.User;
+import com.user.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/auth")
 public class UserController {
@@ -16,6 +18,7 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
+        System.out.println("Received User: " + user);
         try {
             User newUser = userService.registerUser(user);
             return ResponseEntity.status(HttpStatus.CREATED).body(newUser);
@@ -23,6 +26,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
     }
+
 
     @PostMapping("/login")
     public ResponseEntity<?> loginUser(@RequestBody User user) {
@@ -33,4 +37,10 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
         }
     }
+
+    @GetMapping("/test-db")
+    public ResponseEntity<?> testDbConnection() {
+        return ResponseEntity.ok("Connected to MongoDB");
+    }
+
 }

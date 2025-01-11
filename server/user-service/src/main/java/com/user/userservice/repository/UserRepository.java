@@ -1,5 +1,6 @@
-package com.user.userservice;
+package com.user.userservice.repository;
 
+import com.user.userservice.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
