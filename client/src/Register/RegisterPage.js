@@ -1,35 +1,35 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
+import axios from 'axios';
 
 const RegisterPage = () => {
   const navigate = useNavigate();
 
-  const handleNext = () => {
-    navigate("/client-multi");
-  };
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [repeatPassword, setRepeatPassword] = useState("")
+  const [repeatPassword, setRepeatPassword] = useState("")
 
   const handleSignup = (e) => {
-    // e.preventDefault();
-    // axios.post("http://localhost:3001/signup", {name, email, password})
-    // .then(result => {
-    //   if(result.status == 201){
-    //     console.log("User Created Successfully");
-    navigate("/client-multi");
-    //   }
-    // })
-    // .catch(err => {
-    //   if (err.response && err.response.status===400) {
-    //     window.alert("Email already exists. Please use a different email")
-    //   } else{
-    //     console.log(err)
-    //   }
-    // })
+    e.preventDefault();
+    if (password !== repeatPassword) {
+      alert("Passwords do not match!");
+      return;
+  }
+  axios.post("http://localhost:3001/api/auth/register", { name, email, password })
+    .then(result => {
+      if(result.status == 201){
+        console.log("User Created Successfully");
+      }
+    })
+    .catch(err => {
+      if (err.response && err.response.status===400) {
+        window.alert("Email already exists. Please use a different email")
+      } else{
+        console.log(err)
+      }
+    })
   };
 
   return (
@@ -76,9 +76,9 @@ const RegisterPage = () => {
               type="password"
               id="repeat-password"
               placeholder="Repeat your password"
-              // name='repeat-password'
-              // onChange={(e) => setRepeatPassword(e.target.value)}
-              // required
+              name='repeat-password'
+              onChange={(e) => setRepeatPassword(e.target.value)}
+              required
             />
 
             <button type="submit" className="btn btn-register">
